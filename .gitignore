@@ -1,0 +1,5 @@
+Tasks/.idea/
+.idea/
+Tasks/logs/
+Tasks/target/
+stale_outputs_checked
