@@ -5,19 +5,28 @@ import javafx.collections.ObservableList;
 import tasks.model.ArrayTaskList;
 import tasks.model.Task;
 import tasks.model.TasksOperations;
+import tasks.services.TaskIO;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 
 public class TasksService {
 
-    private ArrayTaskList tasks;
+    private File savedTasksFile;
 
-    public TasksService(ArrayTaskList tasks){
-        this.tasks = tasks;
+    public TasksService(File tasksFile) {
+        this.savedTasksFile = tasksFile;
     }
 
-
-    public ObservableList<Task> getObservableList(){
+    public ObservableList<Task> getObservableList() {
+        ArrayTaskList tasks = new ArrayTaskList();
+        try {
+            TaskIO.readBinary(tasks, savedTasksFile);
+        } catch (IOException e) {
+            System.out.println("File does not exist!"); //should only happen when file is deleted
+            // while the app is running
+        }
         return FXCollections.observableArrayList(tasks.getAll());
     }
     public String getIntervalInHours(Task task){

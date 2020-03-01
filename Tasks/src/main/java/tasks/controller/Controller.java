@@ -100,6 +100,7 @@ public class Controller {
             editNewStage.initOwner(Main.primaryStage);
             editNewStage.initModality(Modality.APPLICATION_MODAL);//??????
             editNewStage.show();
+
         }
         catch (IOException e){
             log.error("Error loading new-edit-task.fxml");
@@ -130,14 +131,21 @@ public class Controller {
     }
     @FXML
     public void showFilteredTasks(){
-        Date start = getDateFromFilterField(datePickerFrom.getValue(), fieldTimeFrom.getText());
-        Date end = getDateFromFilterField(datePickerTo.getValue(), fieldTimeTo.getText());
+        try{
+            Date start = getDateFromFilterField(datePickerFrom.getValue(), fieldTimeFrom.getText());
+            Date end = getDateFromFilterField(datePickerTo.getValue(), fieldTimeTo.getText());
+            System.out.println(end.toString());
+            Iterable<Task> filtered =  service.filterTasks(start, end);
 
-        Iterable<Task> filtered =  service.filterTasks(start, end);
-
-        ObservableList<Task> observableTasks = FXCollections.observableList((ArrayList)filtered);
-        tasks.setItems(observableTasks);
-        updateCountLabel(observableTasks);
+            ObservableList<Task> observableTasks = FXCollections.observableList((ArrayList)filtered);
+            tasks.setItems(observableTasks);
+            updateCountLabel(observableTasks);
+        }catch(RuntimeException e){
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setHeaderText("Input not valid");
+            errorAlert.setContentText("Both dates have to be completed");
+            errorAlert.showAndWait();
+        }
     }
     private Date getDateFromFilterField(LocalDate localDate, String time){
         Date date = dateService.getDateValueFromLocalDate(localDate);

@@ -23,8 +23,12 @@ public class DateService {
 
     }
     public Date getDateValueFromLocalDate(LocalDate localDate){//for getting from DatePicker
-        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
-        return Date.from(instant);
+        try{
+            Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+            return Date.from(instant);
+        }catch(NullPointerException e){
+            throw new RuntimeException("Invalid date");
+        }
     }
     public Date getDateMergedWithTime(String time, Date noTimeDate) {//to retrieve Date object from both DatePicker and time field
         String[] units = time.split(":");
