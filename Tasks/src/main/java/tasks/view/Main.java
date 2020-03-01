@@ -9,8 +9,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import tasks.controller.Controller;
 import tasks.controller.Notificator;
-import tasks.model.ArrayTaskList;
-import tasks.services.TaskIO;
+
 import tasks.services.TasksService;
 
 import java.io.File;
@@ -24,27 +23,22 @@ public class Main extends Application {
 
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
-    private ArrayTaskList savedTasksList = new ArrayTaskList();
 
     private static ClassLoader classLoader = Main.class.getClassLoader();
     public static File savedTasksFile = new File(classLoader.getResource("data/tasks.txt").getFile());
 
-    private TasksService service = new TasksService(savedTasksList);//savedTasksList);
+    private TasksService service = new TasksService(savedTasksFile);
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-
         log.info("saved data reading");
-        if (savedTasksFile.length() != 0) {
-            TaskIO.readBinary(savedTasksList, savedTasksFile);
-        }
         try {
             log.info("application start");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
             Parent root = loader.load();//loader.load(this.getClass().getResource("/fxml/main.fxml"));
             Controller ctrl= loader.getController();
-            service = new TasksService(savedTasksList);
+            service = new TasksService(savedTasksFile);
 
             ctrl.setService(service);
             primaryStage.setTitle("Task Manager");

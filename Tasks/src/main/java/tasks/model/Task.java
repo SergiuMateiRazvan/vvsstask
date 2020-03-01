@@ -97,7 +97,7 @@ public class Task implements Serializable, Cloneable {
 
     }
     public Date nextTimeAfter(Date current){
-        if (current.after(end) || current.equals(end))return null;
+        if (current.after(end))return null;
         if (isRepeated() && isActive()){
             Date timeBefore  = start;
             Date timeAfter = start;
