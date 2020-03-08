@@ -1,11 +1,10 @@
-package tasks.services;
+package tasks.model;
 
 
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
-import tasks.model.LinkedTaskList;
-import tasks.model.Task;
-import tasks.model.TaskList;
+import tasks.repository.AbstractTaskRepository;
+import tasks.repository.LinkedTaskRepository;
 import tasks.view.*;
 
 import java.io.*;
@@ -21,7 +20,7 @@ public class TaskIO {
     private static final int secondsInMin = 60;
 
     private static final Logger log = Logger.getLogger(TaskIO.class.getName());
-    public static void write(TaskList tasks, OutputStream out) throws IOException {
+    public static void write(AbstractTaskRepository tasks, OutputStream out) throws IOException {
         DataOutputStream dataOutputStream = new DataOutputStream(out);
         try {
             dataOutputStream.writeInt(tasks.size());
@@ -43,7 +42,7 @@ public class TaskIO {
             dataOutputStream.close();
         }
     }
-    public static void read(TaskList tasks, InputStream in)throws IOException {
+    public static void read(AbstractTaskRepository tasks, InputStream in)throws IOException {
         DataInputStream dataInputStream = new DataInputStream(in);
         try {
             int listLength = dataInputStream.readInt();
@@ -69,7 +68,7 @@ public class TaskIO {
             dataInputStream.close();
         }
     }
-    public static void writeBinary(TaskList tasks, File file)throws IOException{
+    public static void writeBinary(AbstractTaskRepository tasks, File file)throws IOException{
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(file);
@@ -83,7 +82,7 @@ public class TaskIO {
         }
     }
 
-    public static void readBinary(TaskList tasks, File file) throws IOException{
+    public static void readBinary(AbstractTaskRepository tasks, File file) throws IOException{
         FileInputStream fis = null;
         try {
             fis = new FileInputStream(file);
@@ -96,7 +95,7 @@ public class TaskIO {
             fis.close();
         }
     }
-    public static void write(TaskList tasks, Writer out) throws IOException {
+    public static void write(AbstractTaskRepository tasks, Writer out) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(out);
         Task lastTask = tasks.getTask(tasks.size()-1);
         for (Task t : tasks){
@@ -108,7 +107,7 @@ public class TaskIO {
 
     }
 
-    public static void read(TaskList tasks, Reader in)  throws IOException {
+    public static void read(AbstractTaskRepository tasks, Reader in)  throws IOException {
         BufferedReader reader = new BufferedReader(in);
         String line;
         Task t;
@@ -119,7 +118,7 @@ public class TaskIO {
         reader.close();
 
     }
-    public static void writeText(TaskList tasks, File file) throws IOException {
+    public static void writeText(AbstractTaskRepository tasks, File file) throws IOException {
         FileWriter fileWriter = new FileWriter(file);
         try {
             write(tasks, fileWriter);
@@ -132,7 +131,7 @@ public class TaskIO {
         }
 
     }
-    public static void readText(TaskList tasks, File file) throws IOException {
+    public static void readText(AbstractTaskRepository tasks, File file) throws IOException {
         FileReader fileReader = new FileReader(file);
         try {
             read(tasks, fileReader);
@@ -289,7 +288,7 @@ public class TaskIO {
 
 
     public static void rewriteFile(ObservableList<Task> tasksList) {
-        LinkedTaskList taskList = new LinkedTaskList();
+        LinkedTaskRepository taskList = new LinkedTaskRepository();
         for (Task t : tasksList){
             taskList.add(t);
         }

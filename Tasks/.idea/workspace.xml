@@ -1,14 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe79f98-8ba9-4627-a3ca-7e0c8d7562fb" name="Default Changelist" comment="" />
+    <list default="true" id="bbe79f98-8ba9-4627-a3ca-7e0c8d7562fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Lab01/Checklists/Lab01_Architectural Design Phase Defects Checklist.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Lab01/Checklists/Lab01_Architectural Design Phase Defects Checklist.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Lab01/Lab01_ReviewReport.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Lab01/Lab01_ReviewReport.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/initial/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/initial/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/controller/NewEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/controller/NewEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/controller/Notificator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/model/Notificator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/controller/TaskInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/controller/TaskInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/model/ArrayTaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/repository/ArrayTaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/model/LinkedTaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/repository/LinkedTaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/model/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/repository/AbstractTaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/model/TasksOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/services/TasksOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/services/TaskIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/model/TaskIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/services/TasksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/services/TasksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-342651516">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="JAVA/tasks" value="3" />
+          <entry key="JavaScript-modules-diagram/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/controller;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/services;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/view;" value="2" />
+          <entry key="JavaScript-modules-diagram/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;" value="1" />
+          <entry key="NewEditController" value="1" />
+          <entry key="PHP/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks" value="1" />
+          <entry key="PHP/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/controller" value="1" />
+          <entry key="Task" value="2" />
+          <entry key="controller" value="5" />
+          <entry key="fxml" value="1" />
+          <entry key="java" value="15" />
+          <entry key="model" value="4" />
+          <entry key="repository" value="2" />
+          <entry key="services" value="2" />
+          <entry key="uml" value="3" />
+          <entry key="view" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="15" />
+          <entry key="UML" value="28" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="27" />
+          <entry key="fxml" value="1" />
+          <entry key="java" value="19" />
+          <entry key="txt" value="56" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="19" />
+          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Tasks" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Docs/initial/diagram.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="0.0" y="0.0">tasks.repository.LinkedTaskRepository.Node</node>
+                <node x="293.8557183583298" y="1578.9365245101244">tasks.repository.ArrayTaskRepository.ArrayTaskListIterator</node>
+                <node x="1416.9227206054384" y="0.0">tasks.services.DateService</node>
+                <node x="240.5061649150568" y="259.90562763612195">tasks.repository.LinkedTaskRepository</node>
+                <node x="261.7644212617621" y="1099.435925650256">tasks.repository.ArrayTaskRepository</node>
+                <node x="1040.9227206054384" y="0.0">tasks.model.TaskIO</node>
+                <node x="737.9227206054383" y="0.0">tasks.model.Task</node>
+                <node x="699.0" y="1764.9365245101244">tasks.controller</node>
+                <node x="205.70922540268418" y="748.8740096277159">tasks.repository.AbstractTaskRepository</node>
+                <node x="1771.9227206054384" y="0.0">tasks.view.Main</node>
+                <node x="528.9227206054383" y="112.34938815807004">tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+                <node x="312.0" y="1764.9365245101244">tasks.services.TasksOperations</node>
+                <node x="0.0" y="1764.9365245101244">tasks.services.TasksService</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="tasks.repository.ArrayTaskRepository" target="tasks.repository.AbstractTaskRepository">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="tasks.repository.ArrayTaskRepository.ArrayTaskListIterator" target="tasks.repository.ArrayTaskRepository">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="tasks.repository.LinkedTaskRepository" target="tasks.repository.AbstractTaskRepository">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="tasks.repository.LinkedTaskRepository.Node" target="tasks.repository.LinkedTaskRepository">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="tasks.repository.LinkedTaskRepository.LinkedTaskListIterator" target="tasks.repository.LinkedTaskRepository">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Balloon" zoom="0.9043610547667342" x="598.1159582819334" y="1641.6535830436246" />
+              <SelectedNodes>
+                <node>tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/controller/TaskController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="137" column="53" lean-forward="true" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/controller/NewEditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/services/TasksService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -17,6 +183,32 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>btnShow</find>
+      <find>showFilteredTasks</find>
+      <find>service</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/tasks/model/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,7 +216,131 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
   <component name="ProjectId" id="1XnEHoqZMPZ1XnpQrub9xp7L4QM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="Docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="Docs" type="462c0819:PsiDirectoryNode" />
+              <item name="initial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="Docs" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="Docs" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab01" type="462c0819:PsiDirectoryNode" />
+              <item name="Checklists" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,12 +351,148 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583684199047" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs/initial" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager">
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Docs/Lab01/Checklists/Lab01_Architectural Design Phase Defects Checklist.pdf</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tasks.view.Main" />
+      <module name="Tasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tasks.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tasks [exec:java]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -67,6 +519,15 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Maven.Tasks [exec:java]" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,11 +548,63 @@
       <workItem from="1582286420057" duration="780000" />
       <workItem from="1582287916397" duration="1828000" />
       <workItem from="1582489647132" duration="101000" />
+      <workItem from="1583672044274" duration="8849000" />
     </task>
+    <task id="LOCAL-00001" summary="L01_ReviewReport Arhitect. Design Phase Defects">
+      <created>1583678397774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583678397775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8849000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.329429" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.0029282577" />
+      <window_info anchor="bottom" id="Terminal" weight="0.329429" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.33089313" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13469985" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="L01_ReviewReport Arhitect. Design Phase Defects" />
+    <option name="LAST_COMMIT_MESSAGE" value="L01_ReviewReport Arhitect. Design Phase Defects" />
   </component>
   <component name="WindowStateProjectService">
     <state x="271" y="0" key="#Tasks_[exec:java]" timestamp="1581673618434">
@@ -146,6 +659,566 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="75" y="50" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1581687738169" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/services/DateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/tasks</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/main/java/tasks/services</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/java/tasks/model</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/java/tasks/view</node>
+            <node x="" y="">$PROJECT_DIR$/src/main/java/tasks/controller</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="91.5" y="90.0" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/tasks/controller</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/repository/LinkedTaskRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/services/TasksOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/model/TaskIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/repository/AbstractTaskRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/repository/ArrayTaskRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/model/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="59" column="119" lean-forward="true" selection-start-line="59" selection-start-column="102" selection-end-line="59" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/model/Notificator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/services/TasksService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="137" column="53" lean-forward="true" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/controller/NewEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/controller;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/services;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/view;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/tasks/controller;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/services;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/view;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/tasks/model;C:/An3_Semestrul2/VVSS/vvsstask/Tasks/src/main/java/tasks/repository;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks</OriginalElement>
+          <nodes>
+            <node x="" y="">tasks.view</node>
+            <node x="" y="">tasks.repository</node>
+            <node x="" y="">tasks.controller</node>
+            <node x="" y="">tasks.model</node>
+            <node x="" y="">tasks.services</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="130.5" y="127.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.model.Task">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.model.Task</OriginalElement>
+          <nodes>
+            <node x="" y="">java.lang.Cloneable</node>
+            <node x="" y="">java.lang.Thread.WeakClassKey</node>
+            <node x="" y="">java.lang.Thread.UncaughtExceptionHandler</node>
+            <node x="" y="">java.lang.Runnable</node>
+            <node x="" y="">tasks.model.TaskIO</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">java.lang.FunctionalInterface</node>
+            <node x="" y="">tasks.model.Notificator</node>
+            <node x="" y="">tasks.controller.TaskController</node>
+            <node x="" y="">java.lang.Thread.Caches</node>
+            <node x="" y="">java.lang.Thread</node>
+            <node x="" y="">tasks.controller.TaskInfoController</node>
+            <node x="" y="">tasks.model.Task</node>
+            <node x="" y="">tasks.controller.NewEditController</node>
+            <node x="" y="">java.lang.Thread.State</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7775793650793652" x="689.8976779790762" y="400.30237305435054" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.controller.NewEditController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.controller.NewEditController</OriginalElement>
+          <nodes>
+            <node x="" y="">tasks.repository.LinkedTaskRepository.Node</node>
+            <node x="" y="">java.lang.Thread.WeakClassKey</node>
+            <node x="" y="">java.lang.Thread.UncaughtExceptionHandler</node>
+            <node x="" y="">tasks.services.DateService</node>
+            <node x="" y="">tasks.repository.LinkedTaskRepository</node>
+            <node x="" y="">tasks.repository.ArrayTaskRepository</node>
+            <node x="" y="">java.lang.Runnable</node>
+            <node x="" y="">java.lang.Iterable</node>
+            <node x="" y="">tasks.model.TaskIO</node>
+            <node x="" y="">javafx.application.Application</node>
+            <node x="" y="">java.lang.FunctionalInterface</node>
+            <node x="" y="">java.lang.Thread.Caches</node>
+            <node x="" y="">java.lang.Thread</node>
+            <node x="" y="">tasks.model.Task</node>
+            <node x="" y="">tasks.controller.NewEditController</node>
+            <node x="" y="">tasks.view.Main</node>
+            <node x="" y="">java.lang.Cloneable</node>
+            <node x="" y="">tasks.repository.ArrayTaskRepository.ArrayTaskListIterator</node>
+            <node x="" y="">javafx.application.Application.Parameters</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">tasks.model.Notificator</node>
+            <node x="" y="">tasks.controller.TaskController</node>
+            <node x="" y="">tasks.controller.TaskInfoController</node>
+            <node x="" y="">tasks.repository.AbstractTaskRepository</node>
+            <node x="" y="">tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+            <node x="" y="">tasks.services.TasksOperations</node>
+            <node x="" y="">tasks.services.TasksService</node>
+            <node x="" y="">java.lang.Thread.State</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9007266349285893" x="1108.61004784689" y="1136.0926616223433" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Docs/initial/diagram.pdf.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="0.0">tasks.repository.LinkedTaskRepository.Node</node>
+            <node x="293.8557183583298" y="1578.9365245101244">tasks.repository.ArrayTaskRepository.ArrayTaskListIterator</node>
+            <node x="1416.9227206054384" y="0.0">tasks.services.DateService</node>
+            <node x="240.5061649150568" y="259.90562763612195">tasks.repository.LinkedTaskRepository</node>
+            <node x="261.7644212617621" y="1099.435925650256">tasks.repository.ArrayTaskRepository</node>
+            <node x="1040.9227206054384" y="0.0">tasks.model.TaskIO</node>
+            <node x="737.9227206054383" y="0.0">tasks.model.Task</node>
+            <node x="699.0" y="1764.9365245101244">tasks.controller</node>
+            <node x="205.70922540268418" y="748.8740096277159">tasks.repository.AbstractTaskRepository</node>
+            <node x="1771.9227206054384" y="0.0">tasks.view.Main</node>
+            <node x="528.9227206054383" y="112.34938815807004">tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+            <node x="312.0" y="1764.9365245101244">tasks.services.TasksOperations</node>
+            <node x="0.0" y="1764.9365245101244">tasks.services.TasksService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tasks.repository.ArrayTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.ArrayTaskRepository.ArrayTaskListIterator" target="tasks.repository.ArrayTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.Node" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.LinkedTaskListIterator" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Balloon" zoom="0.6043610547667342" x="795.0" y="499.0" />
+          <SelectedNodes>
+            <node>tasks.controller</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.repository">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.repository</OriginalElement>
+          <nodes>
+            <node x="4.401913875597984" y="627.4577352472089">tasks.repository.LinkedTaskRepository.Node</node>
+            <node x="374.0" y="703.5">tasks.repository.ArrayTaskRepository.ArrayTaskListIterator</node>
+            <node x="64.0980861244019" y="231.08851674641147">tasks.repository.LinkedTaskRepository</node>
+            <node x="144.50000000000003" y="0.0">tasks.repository.AbstractTaskRepository</node>
+            <node x="349.5" y="235.0">tasks.repository.ArrayTaskRepository</node>
+            <node x="188.5326953748006" y="656.5462519936203">tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tasks.repository.ArrayTaskRepository.ArrayTaskListIterator" target="tasks.repository.ArrayTaskRepository">
+              <point x="0.0" y="-70.5" />
+              <point x="0.0" y="181.5" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.Node" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="-126.0" />
+              <point x="85.0" y="623.0" />
+              <point x="123.5" y="623.0" />
+              <point x="-55.0" y="159.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.LinkedTaskListIterator" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="-70.5" />
+              <point x="272.0" y="623.0" />
+              <point x="233.5" y="623.0" />
+              <point x="55.0" y="159.0" />
+            </edge>
+            <edge source="tasks.repository.ArrayTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="-181.5" />
+              <point x="456.0" y="210.0" />
+              <point x="374.75" y="210.0" />
+              <point x="76.75" y="92.5" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="-159.0" />
+              <point x="178.5" y="210.0" />
+              <point x="221.25000000000003" y="210.0" />
+              <point x="-76.75" y="92.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6815217391304348" x="-186.5701754385965" y="332.1531100478469" />
+          <SelectedNodes>
+            <node>tasks.repository.LinkedTaskRepository.Node</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.services">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.services</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">tasks.services.DateService</node>
+            <node x="0.0" y="275.0">tasks.services.TasksOperations</node>
+            <node x="355.0" y="0.0">tasks.services.TasksService</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-8.0" y="124.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.view">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.view</OriginalElement>
+          <nodes>
+            <node x="" y="">tasks.view.Main</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="97.0" y="114.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.controller</OriginalElement>
+          <nodes>
+            <node x="" y="">tasks.controller.TaskController</node>
+            <node x="" y="">tasks.controller.TaskInfoController</node>
+            <node x="" y="">tasks.controller.NewEditController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8293650793650794" x="485.94102180964336" y="368.16680290101067" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tasks.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tasks.model</OriginalElement>
+          <nodes>
+            <node x="" y="">tasks.model.Notificator</node>
+            <node x="" y="">tasks.model.Task</node>
+            <node x="" y="">tasks.model.TaskIO</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7721674876847291" x="317.0" y="396.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Docs/initial/diagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="0.0">tasks.repository.LinkedTaskRepository.Node</node>
+            <node x="293.8557183583298" y="1578.9365245101244">tasks.repository.ArrayTaskRepository.ArrayTaskListIterator</node>
+            <node x="1416.9227206054384" y="0.0">tasks.services.DateService</node>
+            <node x="240.5061649150568" y="259.90562763612195">tasks.repository.LinkedTaskRepository</node>
+            <node x="261.7644212617621" y="1099.435925650256">tasks.repository.ArrayTaskRepository</node>
+            <node x="1040.9227206054384" y="0.0">tasks.model.TaskIO</node>
+            <node x="737.9227206054383" y="0.0">tasks.model.Task</node>
+            <node x="699.0" y="1764.9365245101244">tasks.controller</node>
+            <node x="205.70922540268418" y="748.8740096277159">tasks.repository.AbstractTaskRepository</node>
+            <node x="1771.9227206054384" y="0.0">tasks.view.Main</node>
+            <node x="528.9227206054383" y="112.34938815807004">tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+            <node x="312.0" y="1764.9365245101244">tasks.services.TasksOperations</node>
+            <node x="0.0" y="1764.9365245101244">tasks.services.TasksService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tasks.repository.ArrayTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.ArrayTaskRepository.ArrayTaskListIterator" target="tasks.repository.ArrayTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository" target="tasks.repository.AbstractTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.Node" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="tasks.repository.LinkedTaskRepository.LinkedTaskListIterator" target="tasks.repository.LinkedTaskRepository">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Balloon" zoom="0.9043610547667342" x="598.1159582819334" y="1641.6535830436246" />
+          <SelectedNodes>
+            <node>tasks.repository.LinkedTaskRepository.LinkedTaskListIterator</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

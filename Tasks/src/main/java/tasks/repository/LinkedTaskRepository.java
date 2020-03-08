@@ -1,8 +1,9 @@
-package tasks.model;
+package tasks.repository;
 
 
 
 import org.apache.log4j.Logger;
+import tasks.model.Task;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -11,8 +12,8 @@ import java.util.NoSuchElementException;
 
 import static java.util.Objects.isNull;
 
-public class LinkedTaskList  extends TaskList {
-    private static final Logger log = Logger.getLogger(LinkedTaskList.class.getName());
+public class LinkedTaskRepository extends AbstractTaskRepository {
+    private static final Logger log = Logger.getLogger(LinkedTaskRepository.class.getName());
     private class LinkedTaskListIterator implements Iterator<Task>{
         private int cursor;
         private int lastCalled = -1;
@@ -38,7 +39,7 @@ public class LinkedTaskList  extends TaskList {
             if (lastCalled == -1){
                 throw new IllegalStateException();
             }
-            LinkedTaskList.this.remove(getTask(lastCalled));
+            LinkedTaskRepository.this.remove(getTask(lastCalled));
             cursor = lastCalled;
             lastCalled = -1;
         }
@@ -149,12 +150,12 @@ public class LinkedTaskList  extends TaskList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        LinkedTaskList that = (LinkedTaskList) o;
+        LinkedTaskRepository that = (LinkedTaskRepository) o;
 
         if (numberOfTasks != that.numberOfTasks) return false;
         int i = 0;
         for (Task a : this){
-            if (!a.equals(((LinkedTaskList) o).getTask(i))){
+            if (!a.equals(((LinkedTaskRepository) o).getTask(i))){
                 return false;
             }
             i++;
@@ -171,14 +172,14 @@ public class LinkedTaskList  extends TaskList {
 
     @Override
     public String toString() {
-        return "LinkedTaskList{" +
+        return "LinkedTaskRepository{" +
                 "numberOfTasks=" + numberOfTasks +
                 ", last=" + last +
                 '}';
     }
     @Override
-    protected LinkedTaskList clone() throws CloneNotSupportedException {
-        LinkedTaskList tasks = new LinkedTaskList();
+    protected LinkedTaskRepository clone() throws CloneNotSupportedException {
+        LinkedTaskRepository tasks = new LinkedTaskRepository();
         for (Task t : this){
             tasks.add(t);
         }

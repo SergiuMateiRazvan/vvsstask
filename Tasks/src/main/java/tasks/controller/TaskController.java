@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import tasks.model.Task;
 import tasks.services.DateService;
-import tasks.services.TaskIO;
+import tasks.model.TaskIO;
 import tasks.services.TasksService;
 import tasks.view.Main;
 
@@ -25,8 +25,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-public class Controller {
-    private static final Logger log = Logger.getLogger(Controller.class.getName());
+public class TaskController {
+    private static final Logger log = Logger.getLogger(TaskController.class.getName());
     public ObservableList<Task> tasksList;
     TasksService service;
     DateService dateService;

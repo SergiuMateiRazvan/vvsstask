@@ -1,18 +1,19 @@
-package tasks.model;
+package tasks.repository;
 
 
 
 import org.apache.log4j.Logger;
+import tasks.model.Task;
 
 import java.util.*;
 
 
-public class ArrayTaskList extends TaskList{
+public class ArrayTaskRepository extends AbstractTaskRepository {
 
     private Task[] tasks;
     private int numberOfTasks;
     private int currentCapacity;
-    private static final Logger log = Logger.getLogger(ArrayTaskList.class.getName());
+    private static final Logger log = Logger.getLogger(ArrayTaskRepository.class.getName());
     private class ArrayTaskListIterator implements Iterator<Task> {
         private int cursor;
         private int lastCalled = -1;
@@ -36,12 +37,12 @@ public class ArrayTaskList extends TaskList{
             if (lastCalled == -1){
                 throw new IllegalStateException();
             }
-            ArrayTaskList.this.remove(getTask(lastCalled));
+            ArrayTaskRepository.this.remove(getTask(lastCalled));
             cursor = lastCalled;
             lastCalled = -1;
         }
     }
-    public ArrayTaskList(){
+    public ArrayTaskRepository(){
         currentCapacity = 10;
         this.tasks = new Task[currentCapacity];
     }
@@ -108,12 +109,12 @@ public class ArrayTaskList extends TaskList{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ArrayTaskList that = (ArrayTaskList) o;
+        ArrayTaskRepository that = (ArrayTaskRepository) o;
 
         if (numberOfTasks != that.numberOfTasks) return false;
         int i = 0;
         for (Task a : this){
-            if (!a.equals(((ArrayTaskList) o).getTask(i))){
+            if (!a.equals(((ArrayTaskRepository) o).getTask(i))){
                 return false;
             }
             i++;
@@ -131,15 +132,15 @@ public class ArrayTaskList extends TaskList{
 
     @Override
     public String toString() {
-        return "ArrayTaskList{" +
+        return "ArrayTaskRepository{" +
                 "tasks=" + Arrays.toString(tasks) +
                 ", numberOfTasks=" + numberOfTasks +
                 ", currentCapacity=" + currentCapacity +
                 '}';
     }
     @Override
-    protected ArrayTaskList clone() throws CloneNotSupportedException {
-        ArrayTaskList tasks = new ArrayTaskList();
+    protected ArrayTaskRepository clone() throws CloneNotSupportedException {
+        ArrayTaskRepository tasks = new ArrayTaskRepository();
         for (int i = 0; i < this.tasks.length; i++){
             tasks.add(this.getTask(i));
         }

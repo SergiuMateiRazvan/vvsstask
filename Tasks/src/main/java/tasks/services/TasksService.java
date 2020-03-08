@@ -2,10 +2,9 @@ package tasks.services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import tasks.model.ArrayTaskList;
+import tasks.model.TaskIO;
+import tasks.repository.ArrayTaskRepository;
 import tasks.model.Task;
-import tasks.model.TasksOperations;
-import tasks.services.TaskIO;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +19,7 @@ public class TasksService {
     }
 
     public ObservableList<Task> getObservableList() {
-        ArrayTaskList tasks = new ArrayTaskList();
+        ArrayTaskRepository tasks = new ArrayTaskRepository();
         try {
             TaskIO.readBinary(tasks, savedTasksFile);
         } catch (IOException e) {
