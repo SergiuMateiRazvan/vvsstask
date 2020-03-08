@@ -54,7 +54,7 @@ public class ArrayTaskRepository extends AbstractTaskRepository {
 
     @Override
     public void add(Task task){
-        if (task.equals(null)) throw new NullPointerException("Task shouldn't be null");
+        if (task == null) throw new NullPointerException("Task shouldn't be null");
         if (numberOfTasks == currentCapacity-1){
             currentCapacity = currentCapacity * 2;
             Task[] withAddedTask = new Task[currentCapacity];
@@ -138,15 +138,4 @@ public class ArrayTaskRepository extends AbstractTaskRepository {
                 ", currentCapacity=" + currentCapacity +
                 '}';
     }
-    @Override
-    protected ArrayTaskRepository clone() throws CloneNotSupportedException {
-        ArrayTaskRepository tasks = new ArrayTaskRepository();
-        for (int i = 0; i < this.tasks.length; i++){
-            tasks.add(this.getTask(i));
-        }
-        return tasks;
-
-    }
-
-
 }

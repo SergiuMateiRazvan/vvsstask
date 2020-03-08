@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.io.Serializable;
 
 import static java.util.Objects.isNull;
 
@@ -45,7 +46,7 @@ public class LinkedTaskRepository extends AbstractTaskRepository {
         }
     }
     private int numberOfTasks;
-    private Node last;
+    private transient Node last;
 
     @Override
     public void add(Task task) {
@@ -110,7 +111,7 @@ public class LinkedTaskRepository extends AbstractTaskRepository {
         return new LinkedTaskListIterator();
     }
 
-    private static class Node {
+    private static class Node implements Serializable {
         private Task task;
         private Node last;
         private Node next;
@@ -134,10 +135,6 @@ public class LinkedTaskRepository extends AbstractTaskRepository {
 
         private Node getLast() {
             return last;
-        }
-
-        private void setTask(Task task) {
-            this.task = task;
         }
 
         private void setLast(Node last) {
@@ -176,13 +173,5 @@ public class LinkedTaskRepository extends AbstractTaskRepository {
                 "numberOfTasks=" + numberOfTasks +
                 ", last=" + last +
                 '}';
-    }
-    @Override
-    protected LinkedTaskRepository clone() throws CloneNotSupportedException {
-        LinkedTaskRepository tasks = new LinkedTaskRepository();
-        for (Task t : this){
-            tasks.add(t);
-        }
-        return tasks;
     }
 }

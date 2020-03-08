@@ -13,16 +13,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TaskIO {
-    private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("[yyyy-MM-dd HH:mm:ss.SSS]");
     private static final String[] TIME_ENTITY = {" day"," hour", " minute"," second"};
-    private static final int secondsInDay = 86400;
-    private static final int secondsInHour = 3600;
-    private static final int secondsInMin = 60;
-
+    private static final int SECONDS_IN_DAY = 86400;
+    private static final int SECONDS_IN_HOUR = 3600;
+    private static final int SECONDS_IN_MIN = 60;
     private static final Logger log = Logger.getLogger(TaskIO.class.getName());
+    private static final String IO_ERROR_MESSAGE = "IO exception reading or writing file";
+
+    private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("[yyyy-MM-dd HH:mm:ss.SSS]");
+
+    private TaskIO() {
+    }
+
     public static void write(AbstractTaskRepository tasks, OutputStream out) throws IOException {
-        DataOutputStream dataOutputStream = new DataOutputStream(out);
-        try {
+        try(DataOutputStream dataOutputStream = new DataOutputStream(out)) {
             dataOutputStream.writeInt(tasks.size());
             for (Task t : tasks){
                 dataOutputStream.writeInt(t.getTitle().length());
@@ -38,16 +42,13 @@ public class TaskIO {
                 }
             }
         }
-        finally {
-            dataOutputStream.close();
-        }
     }
+
     public static void read(AbstractTaskRepository tasks, InputStream in)throws IOException {
-        DataInputStream dataInputStream = new DataInputStream(in);
-        try {
+        try(DataInputStream dataInputStream = new DataInputStream(in)) {
             int listLength = dataInputStream.readInt();
             for (int i = 0; i < listLength; i++){
-                int titleLength = dataInputStream.readInt();
+                dataInputStream.readInt();
                 String title = dataInputStream.readUTF();
                 boolean isActive = dataInputStream.readBoolean();
                 int interval = dataInputStream.readInt();
@@ -64,35 +65,22 @@ public class TaskIO {
                 tasks.add(taskToAdd);
             }
         }
-        finally {
-            dataInputStream.close();
-        }
     }
     public static void writeBinary(AbstractTaskRepository tasks, File file)throws IOException{
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(file);
+        try(FileOutputStream fos = new FileOutputStream(file)) {
             write(tasks,fos);
         }
         catch (IOException e){
-            log.error("IO exception reading or writing file");
-        }
-        finally {
-            fos.close();
+            log.error(IO_ERROR_MESSAGE);
         }
     }
 
     public static void readBinary(AbstractTaskRepository tasks, File file) throws IOException{
-        FileInputStream fis = null;
-        try {
-            fis = new FileInputStream(file);
+        try(FileInputStream fis = new FileInputStream(file)) {
             read(tasks, fis);
         }
         catch (IOException e){
-            log.error("IO exception reading or writing file");
-        }
-        finally {
-            fis.close();
+            log.error(IO_ERROR_MESSAGE);
         }
     }
     public static void write(AbstractTaskRepository tasks, Writer out) throws IOException {
@@ -118,28 +106,21 @@ public class TaskIO {
         reader.close();
 
     }
-    public static void writeText(AbstractTaskRepository tasks, File file) throws IOException {
-        FileWriter fileWriter = new FileWriter(file);
-        try {
-            write(tasks, fileWriter);
-        }
-        catch (IOException e ){
-            log.error("IO exception reading or writing file");
-        }
-        finally {
-            fileWriter.close();
-        }
 
+    public static void writeText(AbstractTaskRepository tasks, File file) throws IOException {
+        try (FileWriter fileWriter = new FileWriter(file)) {
+            write(tasks, fileWriter);
+        } catch (IOException e) {
+            log.error(IO_ERROR_MESSAGE);
+        }
     }
+
     public static void readText(AbstractTaskRepository tasks, File file) throws IOException {
-        FileReader fileReader = new FileReader(file);
-        try {
+        try (FileReader fileReader = new FileReader(file)) {
             read(tasks, fileReader);
         }
-        finally {
-            fileReader.close();
-        }
     }
+
     //// service methods for reading
     private static Task getTaskFromString (String line){
         boolean isRepeated = line.contains("from");//if contains - means repeated
@@ -160,46 +141,57 @@ public class TaskIO {
         result.setActive(isActive);
         return result;
     }
-    //
-    private static int getIntervalFromText(String line){
-        int days, hours, minutes, seconds;
-        //[1 day 2 hours 46 minutes 40 seconds].
-        //[46 minutes 40 seconds].
-        //[46 minutes].
-        int start = line.lastIndexOf("[");
-        int end = line.lastIndexOf("]");
+
+    private static int[] getTimeEntities(String line) {
+        int start = line.lastIndexOf('[');
+        int end = line.lastIndexOf(']');
         String trimmed = line.substring(start+1, end);//returns interval without brackets -> 2 hours 46 minutes
-        days = trimmed.contains("day") ? 1 : 0;
-        hours = trimmed.contains("hour") ? 1 : 0;
-        minutes = trimmed.contains("minute") ? 1 : 0;
-        seconds = trimmed.contains("second") ? 1 : 0;
+        int days = trimmed.contains("day") ? 1 : 0;
+        int hours = trimmed.contains("hour") ? 1 : 0;
+        int minutes = trimmed.contains("minute") ? 1 : 0;
+        int seconds = trimmed.contains("second") ? 1 : 0;
 
         int[] timeEntities = new int[]{days, hours, minutes, seconds};
-        int i = 0, j = timeEntities.length-1;// positions of timeEntities available
+
+        int i = 0;
+        int j = timeEntities.length-1;// positions of timeEntities available
         while (i != 1 && j != 1) {
             if (timeEntities[i] == 0) i++;
             if (timeEntities[j] == 0) j--;
         }
 
-        String[] numAndTextValues = trimmed.split(" "); //{"46", "minutes", "40", "seconds"};
+        String[] numAndTextValues = trimmed.split(" ");
         for (int k = 0 ; k < numAndTextValues.length; k+=2){
             timeEntities[i] = Integer.parseInt(numAndTextValues[k]);
             i++;
         }
 
+       return timeEntities;
+    }
+
+    private static int getIntervalFromText(String line){
+        int[] timeEntities = getTimeEntities(line);
+
+
         int result = 0;
-        for (int p = 0; p < timeEntities.length; p++){
-            if (timeEntities[p] != 0 && p == 0){
-                result+=secondsInDay*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 1){
-                result+=secondsInHour*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 2){
-                result+=secondsInMin*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 3){
-                result+=timeEntities[p];
+        for (int p = 0; p < timeEntities.length; p++) {
+            if (timeEntities[p] != 0) {
+                switch (p) {
+                    case 0:
+                        result += SECONDS_IN_DAY * timeEntities[p];
+                        break;
+                    case 1:
+                        result += SECONDS_IN_HOUR * timeEntities[p];
+                        break;
+                    case 2:
+                        result += SECONDS_IN_MIN * timeEntities[p];
+                        break;
+                    case 3:
+                        result += timeEntities[p];
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         return result;
@@ -208,16 +200,17 @@ public class TaskIO {
     private static Date getDateFromText (String line, boolean isStartTime) {
         Date date = null;
         String trimmedDate; //date trimmed from whole string
-        int start, end;
+        int start;
+        int end;
 
         if (isStartTime){
-            start = line.indexOf("[");
-            end = line.indexOf("]");
+            start = line.indexOf('[');
+            end = line.indexOf(']');
         }
         else {
-            int firstRightBracket = line.indexOf("]");
-            start = line.indexOf("[", firstRightBracket+1);
-            end = line.indexOf("]", firstRightBracket+1);
+            int firstRightBracket = line.indexOf(']');
+            start = line.indexOf('[', firstRightBracket+1);
+            end = line.indexOf(']', firstRightBracket+1);
         }
         trimmedDate = line.substring(start, end+1);
         try {
@@ -231,7 +224,7 @@ public class TaskIO {
     }
     private static String getTitleFromText(String line){
         int start = 1;
-        int end = line.lastIndexOf("\"");
+        int end = line.lastIndexOf('\"');
         String result = line.substring(start, end);
         result = result.replace("\"\"", "\"");
         return result;
@@ -266,13 +259,14 @@ public class TaskIO {
         if (interval <= 0) throw new IllegalArgumentException("Interval <= 0");
         StringBuilder sb = new StringBuilder();
 
-        int days = interval/secondsInDay;
-        int hours = (interval - secondsInDay*days) / secondsInHour;
-        int minutes = (interval - (secondsInDay*days + secondsInHour*hours)) / secondsInMin;
-        int seconds = (interval - (secondsInDay*days + secondsInHour*hours + secondsInMin*minutes));
+        int days = interval/SECONDS_IN_DAY;
+        int hours = (interval - SECONDS_IN_DAY*days) / SECONDS_IN_HOUR;
+        int minutes = (interval - (SECONDS_IN_DAY*days + SECONDS_IN_HOUR*hours)) / SECONDS_IN_MIN;
+        int seconds = (interval - (SECONDS_IN_DAY*days + SECONDS_IN_HOUR*hours + SECONDS_IN_MIN*minutes));
 
         int[] time = new int[]{days, hours, minutes, seconds};
-        int i = 0, j = time.length-1;
+        int i = 0;
+        int j = time.length-1;
         while (time[i] == 0 || time[j] == 0){
             if (time[i] == 0) i++;
             if (time[j] == 0) j--;
@@ -296,7 +290,7 @@ public class TaskIO {
             TaskIO.writeBinary(taskList, Main.savedTasksFile);
         }
         catch (IOException e){
-            log.error("IO exception reading or writing file");
+            log.error(IO_ERROR_MESSAGE);
         }
     }
 }

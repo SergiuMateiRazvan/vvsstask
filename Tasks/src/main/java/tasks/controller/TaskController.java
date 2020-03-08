@@ -27,14 +27,14 @@ import java.util.Date;
 
 public class TaskController {
     private static final Logger log = Logger.getLogger(TaskController.class.getName());
-    public ObservableList<Task> tasksList;
+    private ObservableList<Task> tasksList;
     TasksService service;
     DateService dateService;
 
-    public static Stage editNewStage;
-    public static Stage infoStage;
+    private static Stage editNewStage;
+    private static Stage infoStage;
 
-    public static TableView mainTable;
+    private static TableView mainTable;
 
     @FXML
     public  TableView tasks;
@@ -70,6 +70,18 @@ public class TaskController {
         );
     }
 
+    public static void closeStage(){
+        editNewStage.close();
+    }
+
+    public static void closeInfo(){
+        infoStage.close();
+    }
+
+    public static TableView getMainTable(){
+        return mainTable;
+    }
+
     @FXML
     public void initialize(){
         log.info("Main controller initializing");
@@ -90,14 +102,14 @@ public class TaskController {
             editNewStage = new Stage();
             NewEditController.setCurrentStage(editNewStage);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/new-edit-task.fxml"));
-            Parent root = loader.load();//getClass().getResource("/fxml/new-edit-task.fxml"));
+            Parent root = loader.load();
             NewEditController editCtrl = loader.getController();
             editCtrl.setService(service);
             editCtrl.setTasksList(tasksList);
             editCtrl.setCurrentTask((Task)mainTable.getSelectionModel().getSelectedItem());
             editNewStage.setScene(new Scene(root, 600, 350));
             editNewStage.setResizable(false);
-            editNewStage.initOwner(Main.primaryStage);
+            editNewStage.initOwner(Main.getPrimaryStage());
             editNewStage.initModality(Modality.APPLICATION_MODAL);//??????
             editNewStage.show();
 
@@ -134,7 +146,6 @@ public class TaskController {
         try{
             Date start = getDateFromFilterField(datePickerFrom.getValue(), fieldTimeFrom.getText());
             Date end = getDateFromFilterField(datePickerTo.getValue(), fieldTimeTo.getText());
-            System.out.println(end.toString());
             Iterable<Task> filtered =  service.filterTasks(start, end);
 
             ObservableList<Task> observableTasks = FXCollections.observableList((ArrayList)filtered);

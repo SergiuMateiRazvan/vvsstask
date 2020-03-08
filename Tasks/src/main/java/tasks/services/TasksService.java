@@ -2,10 +2,10 @@ package tasks.services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.apache.log4j.Logger;
 import tasks.model.TaskIO;
 import tasks.repository.ArrayTaskRepository;
 import tasks.model.Task;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
@@ -13,6 +13,7 @@ import java.util.Date;
 public class TasksService {
 
     private File savedTasksFile;
+    private static final Logger log = Logger.getLogger(TasksService.class.getName());
 
     public TasksService(File tasksFile) {
         this.savedTasksFile = tasksFile;
@@ -23,7 +24,7 @@ public class TasksService {
         try {
             TaskIO.readBinary(tasks, savedTasksFile);
         } catch (IOException e) {
-            System.out.println("File does not exist!"); //should only happen when file is deleted
+            log.error("File does not exist!"); //should only happen when file is deleted
             // while the app is running
         }
         return FXCollections.observableArrayList(tasks.getAll());
@@ -48,15 +49,11 @@ public class TasksService {
         String[] units = stringTime.split(":");
         int hours = Integer.parseInt(units[0]);
         int minutes = Integer.parseInt(units[1]);
-        int result = (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
-        return result;
+        return (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
     }
 
     public Iterable<Task> filterTasks(Date start, Date end){
         TasksOperations tasksOps = new TasksOperations(getObservableList());
-        Iterable<Task> filtered = tasksOps.incoming(start,end);
-        //Iterable<Task> filtered = tasks.incoming(start, end);
-
-        return filtered;
+        return tasksOps.incoming(start,end);
     }
 }
