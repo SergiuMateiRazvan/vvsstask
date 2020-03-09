@@ -17,15 +17,15 @@ import java.io.IOException;
 
 
 public class Main extends Application {
-    public static Stage primaryStage;
-    private static final int defaultWidth = 820;
-    private static final int defaultHeight = 520;
+    private static Stage primaryStage;
+    private static final int DEFAULT_WIDTH = 820;
+    private static final int DEFAULT_HEIGHT = 520;
 
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
 
     private static ClassLoader classLoader = Main.class.getClassLoader();
-    public static File savedTasksFile = new File(classLoader.getResource("data/tasks.txt").getFile());
+    public static final File savedTasksFile = new File(classLoader.getResource("data/tasks.txt").getFile());
 
     private TasksService service = new TasksService(savedTasksFile);
 
@@ -36,25 +36,29 @@ public class Main extends Application {
         try {
             log.info("application start");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
-            Parent root = loader.load();//loader.load(this.getClass().getResource("/fxml/main.fxml"));
+            Parent root = loader.load();
             TaskController ctrl= loader.getController();
             service = new TasksService(savedTasksFile);
 
             ctrl.setService(service);
             primaryStage.setTitle("Task Manager");
-            primaryStage.setScene(new Scene(root, defaultWidth, defaultHeight));
-            primaryStage.setMinWidth(defaultWidth);
-            primaryStage.setMinHeight(defaultHeight);
+            primaryStage.setScene(new Scene(root, DEFAULT_WIDTH, DEFAULT_HEIGHT));
+            primaryStage.setMinWidth(DEFAULT_WIDTH);
+            primaryStage.setMinHeight(DEFAULT_HEIGHT);
             primaryStage.show();
         }
         catch (IOException e){
-            e.printStackTrace();
             log.error("error reading main.fxml");
+            log.error(e.getStackTrace());
         }
-        primaryStage.setOnCloseRequest(we -> {
-                System.exit(0);
-            });
+        primaryStage.setOnCloseRequest(we ->
+                System.exit(0)
+        );
         new Notificator(FXCollections.observableArrayList(service.getObservableList())).start();
+    }
+
+    public static Stage getPrimaryStage() {
+        return Main.primaryStage;
     }
 
     public static void main(String[] args) {
