@@ -2,4 +2,8 @@
 .idea/
 Tasks/logs/
 Tasks/target/
+Tasks/.settings
+Tasks/.classpath
+Tasks/.project
+**/.DS_Store
 stale_outputs_checked
