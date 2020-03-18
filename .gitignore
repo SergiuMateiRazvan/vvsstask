@@ -1,5 +1,6 @@
 **/.idea/
 .idea/
+target/
 Tasks/logs/
 Tasks/target/
 Tasks/.settings
