@@ -54,6 +54,7 @@ class TaskIOTest {
     }
 
     @Test()
+    @DisplayName("TC01_EC")
     void writeOutputStreamErrorTest() {
         out = null;
         when(tasksIterator.hasNext()).thenReturn(true, false);
@@ -62,12 +63,14 @@ class TaskIOTest {
     }
 
     @Test()
+    @DisplayName("TC02_EC")
     void tasksError() {
         repository = null;
         assertThrows(NullPointerException.class, () -> TaskIO.write(repository, out));
     }
 
     @Test()
+    @DisplayName("TC03_EC")
     void writeSome() throws Exception {
         when(tasksIterator.hasNext()).thenReturn(true, true, true, false);
         Task[] tasks = new Task[3];
@@ -80,6 +83,7 @@ class TaskIOTest {
     }
 
     @Test()
+    @DisplayName("TC04_EC")
     void tasksHasNoEntries() throws Exception {
         when(repository.size()).thenReturn(0);
         when(tasksIterator.hasNext()).thenReturn(false);
