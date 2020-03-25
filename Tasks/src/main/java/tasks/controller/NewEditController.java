@@ -6,10 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
@@ -150,7 +147,15 @@ public class NewEditController {
             }
             currentTask = null;
         }
-        TaskIO.rewriteFile(tasksList);
+        try{
+            TaskIO.rewriteFile(tasksList);
+        }catch (RuntimeException e){
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setHeaderText("Input not valid");
+            errorAlert.setContentText(e.getMessage());
+            errorAlert.showAndWait();
+            tasksList.remove(tasksList.size() - 1);
+        }
         TaskController.closeStage();
     }
     @FXML

@@ -10,6 +10,7 @@ import tasks.view.*;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class TaskIO {
@@ -29,6 +30,7 @@ public class TaskIO {
         try(DataOutputStream dataOutputStream = new DataOutputStream(out)) {
             dataOutputStream.writeInt(tasks.size());
             for (Task t : tasks){
+                validateTask(t);
                 dataOutputStream.writeInt(t.getTitle().length());
                 dataOutputStream.writeUTF(t.getTitle());
                 dataOutputStream.writeBoolean(t.isActive());
@@ -42,6 +44,21 @@ public class TaskIO {
                 }
             }
         }
+    }
+
+    private static void validateTask(Task t) {
+        // Title
+        if(t.getTitle().isEmpty()) throw new RuntimeException("Title cannot be empty");
+        if(t.getTitle().length() > 30) throw new RuntimeException("Title cannot have a size larger that 30");
+
+        // Date
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR, -1);
+        if (t.getTime().before(calendar.getTime())) throw new RuntimeException("You cannot add tasks for a past date");
+        calendar.add(Calendar.YEAR, 1);
+        calendar.add(Calendar.HOUR, 1);
+        if (t.getTime().after(calendar.getTime()))
+            throw new RuntimeException("You cannot add tasks for a period greater than one year");
     }
 
     public static void read(AbstractTaskRepository tasks, InputStream in)throws IOException {
