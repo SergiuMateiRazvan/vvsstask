@@ -1,7 +1,9 @@
-package tasks.model;
+package tasks;
 
 import org.junit.jupiter.api.*;
 import org.mockito.Mock;
+import tasks.model.Task;
+import tasks.model.TaskIO;
 import tasks.repository.AbstractTaskRepository;
 import tasks.repository.LinkedTaskRepository;
 import tasks.services.TasksService;

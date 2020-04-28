@@ -1,4 +1,4 @@
-package tasks.model;
+package tasks;
 
 import org.junit.jupiter.api.*;
 
@@ -9,6 +9,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.Mock;
 
+import tasks.model.Task;
+import tasks.model.TaskIO;
 import tasks.repository.AbstractTaskRepository;
 
 import java.io.DataOutputStream;

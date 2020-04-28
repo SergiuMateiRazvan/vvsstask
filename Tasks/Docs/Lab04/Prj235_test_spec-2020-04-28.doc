@@ -1,92 +1,515 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec Prj235 - msir2343_IntT</title>
-<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
-<style type="text/css" media="print">.notprintable { display:none;}</style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>testspec Prj235 - msir2343_IntT</title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2020-04-28T16:22:29.907776511"/>
+	<style type="text/css">
+		p { font-family: "Arial", "Helvetica", sans-serif; font-size: 9pt }
+		td p { font-family: "Arial", "Helvetica", sans-serif; font-size: 9pt }
+		h1 { margin-top: 0.52in; margin-bottom: 0.52in; text-align: left }
+		h1.cjk { font-family: "Arial", "Helvetica", sans-serif }
+		h1.ctl { font-family: "Arial", "Helvetica", sans-serif }
+		h1.general-cjk { font-family: "Arial", "Helvetica", sans-serif }
+		h1.general-ctl { font-family: "Arial", "Helvetica", sans-serif }
+		h1.doclevel-western { border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0in; padding-right: 0in; page-break-before: always }
+		h1.doclevel-cjk { border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0in; padding-right: 0in; font-family: "Arial", "Helvetica", sans-serif; page-break-before: always }
+		h1.doclevel-ctl { border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0in; padding-right: 0in; font-family: "Arial", "Helvetica", sans-serif; page-break-before: always }
+		th p { font-family: "Arial", "Helvetica", sans-serif; font-size: 9pt }
+		a:link { color: #000000; text-decoration: none }
+		a:visited { color: #000000; text-decoration: none }
+	</style>
 </head>
-<body>
-<div>
-<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
-<div>&nbsp;</div><hr />
-<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
-<div class="doc_title"><p>Test Specification</p></div>
-<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj235<br>Test Suite: Prj235 - msir2343_IntT</p></div>
-<div class="summary"><p id="printedby">Printed by TestLink on 28/04/2020</p></div>
-<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
-<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1. msir2343_IntT</a></p></b>
-<p style="padding-left: 45px;"><a href="#toc_tc47171">Prj235-57: RIntegrationWrite</a></p><p style="padding-left: 45px;"><a href="#toc_tc47173">Prj235-58: RIntegrationRead</a></p><p style="padding-left: 45px;"><a href="#toc_tc47175">Prj235-59: IntegrationTestWrite</a></p><p style="padding-left: 45px;"><a href="#toc_tc47177">Prj235-60: IntegrationTestRead</a></p><p style="padding-left: 45px;"><a href="#toc_tc47179">Prj235-61: TestWrite</a></p><p style="padding-left: 45px;"><a href="#toc_tc47181">Prj235-62: TestError</a></p></div><h1 class="doclevel" >Scope</h1>
-<div class="txtlevel"><p>
-	Testing project for group 235</p></div>
- <br/><a name='toc_1'></a>
-<h1 class='doclevel'>1. Test Suite : msir2343_IntT</h1>
-<a name="toc_tc47171"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-57: RIntegrationWrite</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIORIntegrationTest#write</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIORIntegrationTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F01:  Lab02<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
-<a name="toc_tc47173"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-58: RIntegrationRead</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIORIntegrationTest#read</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIORIntegrationTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F02:  Lab03<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
-<a name="toc_tc47175"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-59: IntegrationTestWrite</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIOFullIntegrationTest#write</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIOFullIntegrationTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F01:  Lab02<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
-<a name="toc_tc47177"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-60: IntegrationTestRead</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="2">clir2268</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">High</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIOFullIntegrationTest#read</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIOFullIntegrationTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F02:  Lab03<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
-<a name="toc_tc47179"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-61: TestWrite</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIOTest#writeSome</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIOTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F01:  Lab02<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
-<a name="toc_tc47181"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj235-62: TestError</th></tr>
-<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">msir2343</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >tasks.model.TaskIOTest#tasksError</td></tr>
-<tr><td > name of the autotest class:</td><td  colspan = "2" >tasks.model.TaskIOTest</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">msir2343_F01:  Lab02<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
-</table>
-</div>
+<body lang="en-US" link="#000000" vlink="#000000" dir="ltr" style="border: none; padding: 0in">
+<p style="margin-bottom: 0in">TestLink Community [configure
+$tlCfg-&gt;document_generator-&gt;company_name]</p>
+<p style="margin-bottom: 0in">&nbsp;</p>
+<hr/>
 
+<p align="center"><img src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" name="Image1" alt="TestLink logo" align="bottom" width="219" height="53" border="0"/>
+</p>
+<p>Test Specification</p>
+<p align="left">Test Project: Prj235<br/>
+Test Suite: Prj235 -
+msir2343_IntT</p>
+<p><a name="printedby"></a>Printed by TestLink on 28/04/2020</p>
+<div id="copyright" dir="ltr">
+	<p>2012 © TestLink Community</p>
+</div>
+<h1 class="general-western" style="page-break-before: always">Table
+Of Contents</h1>
+<p style="border: none; padding: 0in"><a href="#toc_1"><b>1.
+msir2343_IntT</b></a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47171">Prj235-57:
+RIntegrationWrite</a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47173">Prj235-58:
+RIntegrationRead</a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47175">Prj235-59:
+IntegrationTestWrite</a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47177">Prj235-60:
+IntegrationTestRead</a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47179">Prj235-61:
+TestWrite</a></p>
+<p style="border: none; padding: 0in"><a href="#toc_tc47181">Prj235-62:
+TestError</a></p>
+<h1 class="doclevel-western">Scope</h1>
+<p>Testing project for group 235</p>
+<p><a name="toc_1"></a><br/>
+<br/>
+
+</p>
+<h1 class="doclevel-western">1. Test Suite : msir2343_IntT</h1>
+<p><a name="toc_tc47171"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-57: RIntegrationWrite</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Automated</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIORIntegrationTest#write</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIORIntegrationTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F01: Lab02</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc47173"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-58: RIntegrationRead</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Automated</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIORIntegrationTest#read</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIORIntegrationTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F02: Lab03</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc47175"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-59: IntegrationTestWrite</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Automated</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOFullIntegrationTest#write</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOFullIntegrationTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F01: Lab02</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc47177"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-60: IntegrationTestRead</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Last edit by:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>clir2268</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Automated</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>High</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOFullIntegrationTest#read</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOFullIntegrationTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F02: Lab03</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc47179"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-61: TestWrite</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Manual</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOTest#writeSome</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F01: Lab02</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc47181"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="3" style="border: none; padding: 0in">
+			<p>Test Case Prj235-62: TestError</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Author:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Execution type:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Manual</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Estimated exec. duration (min):</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Importance:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="border: none; padding: 0in"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the test method:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOTest#tasksError</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0in">
+			<p>name of the autotest class:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>tasks.TaskIOTest</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Requirements</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>msir2343_F01: Lab02</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0in">
+			<p>Keywords:</p>
+		</td>
+		<td colspan="2" style="border: none; padding: 0in">
+			<p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+
+</p>
 </body>
 </html>
