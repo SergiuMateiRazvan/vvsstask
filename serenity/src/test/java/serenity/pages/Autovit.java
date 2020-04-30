@@ -12,8 +12,11 @@ public class Autovit extends PageObject {
     @FindBy(id = "topLoginLink")
     private WebElementFacade loginBtn;
 
-    @FindBy(css=".search-area__button-submit")
+    @FindBy(css = ".search-area__button-submit")
     private WebElementFacade searchBtn;
+
+    @FindBy(className = "agree-button")
+    private WebElementFacade agreeBtn;
 
     public void goToLoginPage() {
         loginBtn.click();
@@ -26,5 +29,11 @@ public class Autovit extends PageObject {
 
     public void navigateToSearch() {
         searchBtn.click();
+    }
+
+    public void agree() {
+        if (agreeBtn.isVisible()) {
+            agreeBtn.click();
+        }
     }
 }

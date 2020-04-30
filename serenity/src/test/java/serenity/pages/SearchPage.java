@@ -16,6 +16,9 @@ public class SearchPage extends PageObject {
     @FindBy(id="search-text")
     private WebElementFacade searchInput;
 
+    @FindBy(css=".offers > article")
+    private WebElementFacade article;
+
 
     public boolean isOpen() {
         return searchBox.isVisible();
@@ -25,10 +28,16 @@ public class SearchPage extends PageObject {
     }
 
     public void setSearchInput(String search) {
-        searchInput.type(search);
+        searchInput.typeAndEnter(search);
+        waitABit(5000);
     }
 
     public void applySearchInput() {
         searchBox.click();
+    }
+
+    public void goToArticle(){
+        article.waitUntilClickable();
+        article.click();
     }
 }
