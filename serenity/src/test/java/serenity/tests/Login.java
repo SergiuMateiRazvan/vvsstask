@@ -1,21 +1,19 @@
 package serenity.tests;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.*;
-import net.thucydides.junit.annotations.Qualifier;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import serenity.helpers.Constants;
-import serenity.helpers.DataReader;
-import serenity.model.User;
 import serenity.steps.serenity.LoginSteps;
 import serenity.steps.serenity.NavigationSteps;
 
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
+@UseTestDataFrom(Constants.userCredentialsFile)
 public class Login {
 
 
@@ -23,18 +21,24 @@ public class Login {
     public WebDriver webdriver;
 
 
-    private User user;
+    private String username;
+    private String password;
+    private String user;
+    private String wrongPassword;
 
-    @Before
-    public void readUser() throws Exception {
-        user = DataReader.readUser(Constants.userCredentialsFile);
-        if(user == null){
-            throw new Exception("User not read");
-        }
+    public String getUsername() {
+        return username;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
-    public User getUser() {
+    public String getWrongPassword() {
+        return wrongPassword;
+    }
+
+    public String getUser() {
         return user;
     }
 
@@ -48,17 +52,16 @@ public class Login {
     public void login() {
         navigationSteps.navigateToHomepage();
         loginSteps.navigateToLoginPage();
-        loginSteps.completeCredentials(user.getUsername(), user.getPassword());
-        loginSteps.login(user.getUserNickName());
+        loginSteps.completeCredentials(getUsername(), getPassword());
+        loginSteps.login(getUser());
     }
 
     @Test
     public void loginFail() {
         navigationSteps.navigateToHomepage();
         loginSteps.navigateToLoginPage();
-        loginSteps.completeCredentials(user.getUsername(), user.getWrongPassword());
+        loginSteps.completeCredentials(getUsername(), getWrongPassword());
         loginSteps.loginFail();
     }
-
 
 }
