@@ -12,6 +12,9 @@ public class Autovit extends PageObject {
     @FindBy(id = "topLoginLink")
     private WebElementFacade loginBtn;
 
+    @FindBy(css=".search-area__button-submit")
+    private WebElementFacade searchBtn;
+
     public void goToLoginPage() {
         loginBtn.click();
     }
@@ -20,4 +23,8 @@ public class Autovit extends PageObject {
         return loginBtn.waitUntilClickable().containsText(username);
     }
 
+
+    public void navigateToSearch() {
+        searchBtn.click();
+    }
 }

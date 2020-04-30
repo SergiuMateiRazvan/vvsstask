@@ -8,7 +8,7 @@ public class NavigationSteps {
     Autovit page;
 
     @Step
-    public void navigateToHompage(){
+    public void navigateToHomepage(){
         page.open();
     }
 }
